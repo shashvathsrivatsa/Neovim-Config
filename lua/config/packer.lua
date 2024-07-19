@@ -36,11 +36,21 @@ require('packer').startup(function(use)
     use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
 
     --  THEME  --
+    -- use ({
+    --     'navarasu/onedark.nvim',
+    --     as = 'onedark',
+    --     config = function()
+    --         vim.cmd ('colorscheme onedark')
+    --         vim.api.nvim_command("highlight StatusLine guibg=none ctermbg=none")  -- Removes bottom row background
+    --     end
+    -- })
+
     use ({
-        'navarasu/onedark.nvim',
-        as = 'onedark',
+        'folke/tokyonight.nvim',
+        as = 'tokyonight',
         config = function()
-            vim.cmd ('colorscheme onedark')
+            vim.cmd ('colorscheme tokyonight')
+            vim.cmd('highlight Visual guibg=#394F78')   -- Change selection color
             vim.api.nvim_command("highlight StatusLine guibg=none ctermbg=none")  -- Removes bottom row background
         end
     })
@@ -101,6 +111,13 @@ require('packer').startup(function(use)
             require('todo-comments').setup {}
         end
     }
+
+    use {
+        'alanfortlink/blackjack.nvim',
+        requires = {'nvim-lua/plenary.nvim'},
+    }
+
+    use ("christoomey/vim-tmux-navigator")
 
     use 'github/copilot.vim'
     use 'tpope/vim-commentary'
