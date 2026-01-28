@@ -83,17 +83,38 @@ require('packer').startup(function(use)
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons',
         config = function()
-            require'nvim-tree'.setup {}
+            require'nvim-tree'.setup ({
+                hijack_cursor = true,
+                renderer = {
+                    full_name = true,
+                    -- group_empty = true,
+                    special_files = {},
+                    symlink_destination = false,
+                    indent_markers = {
+                        enable = true,
+                    },
+                    icons = {
+                        git_placement = "signcolumn",
+                        show = {
+                            file = true,
+                            folder = false,
+                            folder_arrow = false,
+                            git = true,
+                        },
+                    },
+                },
+
+            })
 
             -- Disable git highlights
-            vim.g.nvim_tree_git_hl = 0
+            -- vim.g.nvim_tree_git_hl = 0
 
             -- Disable git icons
-            vim.g.nvim_tree_show_icons = {
-                git = 0,
-                folders = 1,
-                files = 1
-            }
+            -- vim.g.nvim_tree_show_icons = {
+            --     git = 0,
+            --     folders = 1,
+            --     files = 1
+            -- }
         end
     }
 
@@ -117,6 +138,13 @@ require('packer').startup(function(use)
         requires = {'nvim-lua/plenary.nvim'},
     }
 
+    use {
+        "folke/trouble.nvim",
+        config = function()
+            require("trouble").setup {}
+        end
+    }
+
     use ("christoomey/vim-tmux-navigator")
 
     use 'github/copilot.vim'
@@ -126,9 +154,10 @@ require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use('ThePrimeagen/vim-be-good')
     use '907th/vim-auto-save'
-    use 'folke/trouble.nvim'
+    use('mg979/vim-visual-multi')
 
 end)
 
 -- Open nvim-tree on startup
 vim.cmd [[autocmd VimEnter * NvimTreeOpen]]
+

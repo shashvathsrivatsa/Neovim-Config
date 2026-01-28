@@ -15,6 +15,8 @@ vim.keymap.set('x', '<leader>p', '"_dP')    -- Pastes over while retaining curre
 
 vim.api.nvim_set_keymap('n', '<leader>r', ':PackerSync<CR>', {noremap = true})	-- Packer Sync
 
+vim.api.nvim_set_keymap('i', '<Tab>', '    ', { noremap = true, silent = true })
+
 --  REMAPING J AND K  --
 vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
@@ -24,8 +26,8 @@ vim.keymap.set('x', 'k', 'gk')
 --  LINE MANAGEMENT  --
 vim.keymap.set("n", "J", "mzJ`z")   -- Adds below line to end of current line separated by a space (retains cursor position)
 
-vim.keymap.set('n', '<M-,>', 'o<Esc>')	-- Add empty line below
 vim.keymap.set('n', '<M-.>', 'O<Esc>')	-- Add empty line above
+vim.keymap.set('n', '<M-,>', 'o<Esc>')	-- Add empty line below
 
 vim.keymap.set('n', '<leader><Up>', 'VyP')	-- Duplicate line up
 vim.keymap.set('n', '<leader><Down>', 'Vyp')	-- Duplicate line down

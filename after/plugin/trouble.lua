@@ -1,1 +1,1 @@
-vim.api.nvim_set_keymap('n', '<leader>pt', ':TroubleToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>pt', ':Trouble<CR>', {noremap = true, silent = true})
