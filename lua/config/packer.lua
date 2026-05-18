@@ -13,7 +13,7 @@ require('packer').startup(function(use)
         branch = 'v1.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},
+            {'neovim/nvim-lspconfig', tag = 'v1.0.0'},
             {'williamboman/mason.nvim'},
             {'williamboman/mason-lspconfig.nvim'},
 
@@ -79,49 +79,53 @@ require('packer').startup(function(use)
         end
     }
 
-    use {
-        'kyazdani42/nvim-tree.lua',
-        requires = 'kyazdani42/nvim-web-devicons',
-        config = function()
-            require'nvim-tree'.setup ({
-                hijack_cursor = true,
-                renderer = {
-                    full_name = true,
-                    -- group_empty = true,
-                    special_files = {},
-                    symlink_destination = false,
-                    indent_markers = {
-                        enable = true,
-                    },
-                    icons = {
-                        git_placement = "signcolumn",
-                        show = {
-                            file = true,
-                            folder = false,
-                            folder_arrow = false,
-                            git = true,
-                        },
-                    },
-                },
+    -- use {
+    --     'kyazdani42/nvim-tree.lua',
+    --     requires = 'kyazdani42/nvim-web-devicons',
+    --     config = function()
+    --         require'nvim-tree'.setup ({
+    --             hijack_cursor = true,
+    --             renderer = {
+    --                 full_name = true,
+    --                 -- group_empty = true,
+    --                 special_files = {},
+    --                 symlink_destination = false,
+    --                 indent_markers = {
+    --                     enable = true,
+    --                 },
+    --                 icons = {
+    --                     git_placement = "signcolumn",
+    --                     show = {
+    --                         file = true,
+    --                         folder = false,
+    --                         folder_arrow = false,
+    --                         git = true,
+    --                     },
+    --                 },
+    --             },
 
-            })
+    --         })
 
-            -- Disable git highlights
-            -- vim.g.nvim_tree_git_hl = 0
+    --         -- Disable git highlights
+    --         -- vim.g.nvim_tree_git_hl = 0
 
-            -- Disable git icons
-            -- vim.g.nvim_tree_show_icons = {
-            --     git = 0,
-            --     folders = 1,
-            --     files = 1
-            -- }
-        end
-    }
+    --         -- Disable git icons
+    --         -- vim.g.nvim_tree_show_icons = {
+    --         --     git = 0,
+    --         --     folders = 1,
+    --         --     files = 1
+    --         -- }
+    --     end
+    -- }
+
+    use 'kyazdani42/nvim-web-devicons'
 
     use({
         'Wansmer/treesj',
         config = function()
-            require('treesj').setup({--[[ your config ]]})
+            require('treesj').setup({
+                max_join_length = 1000,
+            })
         end,
     })
 
@@ -153,11 +157,25 @@ require('packer').startup(function(use)
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('ThePrimeagen/vim-be-good')
+
+    use {
+        'NvChad/nvim-colorizer.lua',
+        config = function()
+            require('colorizer').setup({
+                user_default_options = {
+                    hex = true,
+                    RGB = true,
+                    names = false,
+                },
+            })
+        end
+    }
+
     use '907th/vim-auto-save'
     use('mg979/vim-visual-multi')
 
 end)
 
 -- Open nvim-tree on startup
-vim.cmd [[autocmd VimEnter * NvimTreeOpen]]
+-- vim.cmd [[autocmd VimEnter * NvimTreeOpen]]
 

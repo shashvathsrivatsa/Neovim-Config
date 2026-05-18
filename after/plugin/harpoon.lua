@@ -16,3 +16,12 @@ vim.keymap.set('n', '<M-z>', function() ui.nav_file(9) end)
 vim.keymap.set('n', '<M-x>', function() ui.nav_file(10) end)
 vim.keymap.set('n', '<M-c>', function() ui.nav_file(11) end)
 vim.keymap.set('n', '<M-v>', function() ui.nav_file(12) end)
+
+-- Open first harpoon file on startup
+vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function()
+        vim.defer_fn(function()
+            ui.nav_file(1)
+        end, 0)
+    end
+})

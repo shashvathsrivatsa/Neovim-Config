@@ -8,12 +8,11 @@ function ColorMyPencils(color)
 
     -- Remove background color for line numbers
     vim.api.nvim_set_hl(0, 'LineNr', { bg = 'none' })
+    vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#B9E981', bg = 'none', bold = false })
 
     -- Optional: Remove background color for end-of-buffer '~' characters
     vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'none' })
 end
 
--- Call the function with desired color (optional)
--- Uncomment and replace 'andromeda' with the desired color name
--- ColorMyPencils('andromeda')
+-- vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#749AB7', bg = 'none', bold = false })
 
