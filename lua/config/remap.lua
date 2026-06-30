@@ -52,6 +52,7 @@ vim.keymap.set('n', '<leader>f', '=ip') 	-- Formats current paragraph
 vim.keymap.set('n', '<leader>F', 'mtggVG=`tzz')	-- Formats entire document (and retains the current cursor position)
 vim.keymap.set('n', '<leader>cc', '_f;lD')    -- Deletes comment at the end of the line
 vim.api.nvim_set_keymap('i', '<C-i>', '<C-w>', {noremap = true})
+vim.keymap.set('i', '<M-BS>', '<C-w>')
 
 --  UTILITIES  --
 vim.api.nvim_set_keymap('n', '<C-B>', '<C-A>', { noremap = true })	-- Increment

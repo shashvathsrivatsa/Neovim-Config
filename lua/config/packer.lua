@@ -1,167 +1,97 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-require('packer').startup(function(use)
-    --  PACKER  --
-    use 'wbthomason/packer.nvim'
+require("packer").startup(function(use)
 
-    --  LSP  --
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
+    --- Packer ------------------------------------------------------------------------------------------------------------------
+    use("wbthomason/packer.nvim")
+
+    --- LSP ---------------------------------------------------------------------------------------------------------------------
+    use ({
+        "VonHeikemen/lsp-zero.nvim",
+        branch = "v1.x",
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig', tag = 'v1.0.0'},
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+            {"neovim/nvim-lspconfig", tag = "v1.0.0"},
+            {"williamboman/mason.nvim"},
+            {"williamboman/mason-lspconfig.nvim"},
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lua'},
-            {'ms-jpq/coq_nvim'},
+            {"hrsh7th/nvim-cmp"},
+            {"hrsh7th/cmp-buffer"},
+            {"hrsh7th/cmp-path"},
+            {"saadparwaiz1/cmp_luasnip"},
+            {"hrsh7th/cmp-nvim-lsp"},
+            {"hrsh7th/cmp-nvim-lua"},
+            {"ms-jpq/coq_nvim"},
 
             -- Snippets
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
+            {"L3MON4D3/LuaSnip"},
+            {"rafamadriz/friendly-snippets"},
         }
-    }
+    })
 
-    --  TREE-SITTER  --
-    use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
+    --- Tree Sitter --------------------------------------------------------------------------------------------------------------
+    use ("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
 
-    --  THEME  --
-    -- use ({
-    --     'navarasu/onedark.nvim',
-    --     as = 'onedark',
-    --     config = function()
-    --         vim.cmd ('colorscheme onedark')
-    --         vim.api.nvim_command("highlight StatusLine guibg=none ctermbg=none")  -- Removes bottom row background
-    --     end
-    -- })
-
+    --- Theme --------------------------------------------------------------------------------------------------------------------
     use ({
-        'folke/tokyonight.nvim',
-        as = 'tokyonight',
+        "folke/tokyonight.nvim",
+        as = "tokyonight",
         config = function()
-            vim.cmd ('colorscheme tokyonight')
-            vim.cmd('highlight Visual guibg=#394F78')   -- Change selection color
+            vim.cmd ("colorscheme tokyonight")
+            vim.cmd("highlight Visual guibg=#3d3d3d")   -- Change selection color
             vim.api.nvim_command("highlight StatusLine guibg=none ctermbg=none")  -- Removes bottom row background
         end
     })
 
-    --  PLUGINS --
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.6',
-        requires = { {'nvim-lua/plenary.nvim'} }
-    }
+    --- Core ---------------------------------------------------------------------------------------------------------------------
+    use("ThePrimeagen/harpoon")
+
+    use("mbbill/undotree")
+
+    use ({
+        "nvim-telescope/telescope.nvim", tag = "0.1.6",
+        requires = {{"nvim-lua/plenary.nvim"}}
+    })
+
+    --- Quality of Life ----------------------------------------------------------------------------------------------------------
+    use ({
+        "folke/trouble.nvim",
+        config = function()
+            require("trouble").setup()
+        end
+    })
+
+    use ({
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = function()
+            require("nvim-autopairs").setup()
+        end
+    })
 
     use({
         "kylechui/nvim-surround",
         tag = "*",
         config = function()
-            require("nvim-surround").setup({
-                -- Configuration here, or leave empty to use defaults
-            })
+            require("nvim-surround").setup()
         end
     })
 
-    use {
-        "windwp/nvim-autopairs",
-        event = "InsertEnter",
-        config = function()
-            require("nvim-autopairs").setup {}
-        end
-    }
-
-    -- use {
-    --     'kyazdani42/nvim-tree.lua',
-    --     requires = 'kyazdani42/nvim-web-devicons',
-    --     config = function()
-    --         require'nvim-tree'.setup ({
-    --             hijack_cursor = true,
-    --             renderer = {
-    --                 full_name = true,
-    --                 -- group_empty = true,
-    --                 special_files = {},
-    --                 symlink_destination = false,
-    --                 indent_markers = {
-    --                     enable = true,
-    --                 },
-    --                 icons = {
-    --                     git_placement = "signcolumn",
-    --                     show = {
-    --                         file = true,
-    --                         folder = false,
-    --                         folder_arrow = false,
-    --                         git = true,
-    --                     },
-    --                 },
-    --             },
-
-    --         })
-
-    --         -- Disable git highlights
-    --         -- vim.g.nvim_tree_git_hl = 0
-
-    --         -- Disable git icons
-    --         -- vim.g.nvim_tree_show_icons = {
-    --         --     git = 0,
-    --         --     folders = 1,
-    --         --     files = 1
-    --         -- }
-    --     end
-    -- }
-
-    use 'kyazdani42/nvim-web-devicons'
-
     use({
-        'Wansmer/treesj',
+        "Wansmer/treesj",
         config = function()
-            require('treesj').setup({
+            require("treesj").setup({
                 max_join_length = 1000,
             })
         end,
     })
 
-    use {
-        'folke/todo-comments.nvim',
-        requires = { 'nvim-lua/plenary.nvim' },
+    use ({
+        "catgoose/nvim-colorizer.lua",
         config = function()
-            require('todo-comments').setup {}
-        end
-    }
-
-    use {
-        'alanfortlink/blackjack.nvim',
-        requires = {'nvim-lua/plenary.nvim'},
-    }
-
-    use {
-        "folke/trouble.nvim",
-        config = function()
-            require("trouble").setup {}
-        end
-    }
-
-    use ("christoomey/vim-tmux-navigator")
-
-    use 'github/copilot.vim'
-    use 'tpope/vim-commentary'
-    use('ThePrimeagen/harpoon')
-    use('mbbill/undotree')
-    use('tpope/vim-fugitive')
-    use('ThePrimeagen/vim-be-good')
-
-    use {
-        'NvChad/nvim-colorizer.lua',
-        config = function()
-            require('colorizer').setup({
+            require("colorizer").setup({
+                filetypes = {},
                 user_default_options = {
                     hex = true,
                     RGB = true,
@@ -169,13 +99,40 @@ require('packer').startup(function(use)
                 },
             })
         end
-    }
+    })
 
-    use '907th/vim-auto-save'
-    use('mg979/vim-visual-multi')
+    use ("tpope/vim-commentary")
+    use ("tpope/vim-fugitive")
+    use ("mg979/vim-visual-multi")
+    use ("github/copilot.vim")
+
+    --- Aesthetics ---------------------------------------------------------------------------------------------------------------
+
+    use ("kyazdani42/nvim-web-devicons")
+
+    use ({
+        "folke/todo-comments.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+        config = function()
+            require("todo-comments").setup()
+        end
+    })
+
+    use ({
+        "lukas-reineke/indent-blankline.nvim",
+        config = function()
+            require("ibl").setup({
+                indent = { char = "▏" },
+                scope = { enabled = false },
+            })
+        end
+    })
+
+    --- Boring but necessary -----------------------------------------------------------------------------------------------------
+
+    use ("christoomey/vim-tmux-navigator")
+    use ("907th/vim-auto-save")
+
 
 end)
-
--- Open nvim-tree on startup
--- vim.cmd [[autocmd VimEnter * NvimTreeOpen]]
 

@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["blackjack.nvim"] = {
-    loaded = true,
-    path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/blackjack.nvim",
-    url = "https://github.com/alanfortlink/blackjack.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -129,6 +124,12 @@ _G.packer_plugins = {
     path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
+  ["indent-blankline.nvim"] = {
+    config = { "\27LJ\2\n|\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\nscope\1\0\1\fenabled\1\vindent\1\0\2\vindent\0\nscope\0\1\0\1\tchar\b‚ñè\nsetup\bibl\frequire\0" },
+    loaded = true,
+    path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -145,7 +146,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["nvim-autopairs"] = {
-    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    config = { "\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -158,10 +159,10 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-colorizer.lua"] = {
-    config = { "\27LJ\2\nÖ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\25user_default_options\1\0\1\25user_default_options\0\1\0\3\nnames\1\bRGB\2\bhex\2\nsetup\14colorizer\frequire\0" },
+    config = { "\27LJ\2\n¢\1\0\0\4\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\0\0=\3\4\0025\3\5\0=\3\6\2B\0\2\1K\0\1\0\25user_default_options\1\0\3\bRGB\2\bhex\2\nnames\1\14filetypes\1\0\2\14filetypes\0\25user_default_options\0\nsetup\14colorizer\frequire\0" },
     loaded = true,
     path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
-    url = "https://github.com/NvChad/nvim-colorizer.lua"
+    url = "https://github.com/catgoose/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -169,7 +170,7 @@ _G.packer_plugins = {
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-surround"] = {
-    config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0" },
+    config = { "\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18nvim-surround\frequire\0" },
     loaded = true,
     path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/nvim-surround",
     url = "https://github.com/kylechui/nvim-surround"
@@ -200,13 +201,13 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["todo-comments.nvim"] = {
-    config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0" },
+    config = { "\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18todo-comments\frequire\0" },
     loaded = true,
     path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
   },
   tokyonight = {
-    config = { "\27LJ\2\nª\1\0\0\3\0\a\0\0146\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\0016\0\0\0009\0\4\0009\0\5\0'\2\6\0B\0\2\1K\0\1\0001highlight StatusLine guibg=none ctermbg=none\17nvim_command\bapi#highlight Visual guibg=#394F78\27colorscheme tokyonight\bcmd\bvim\0" },
+    config = { "\27LJ\2\nª\1\0\0\3\0\a\0\0146\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\0016\0\0\0009\0\4\0009\0\5\0'\2\6\0B\0\2\1K\0\1\0001highlight StatusLine guibg=none ctermbg=none\17nvim_command\bapi#highlight Visual guibg=#3d3d3d\27colorscheme tokyonight\bcmd\bvim\0" },
     loaded = true,
     path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/tokyonight",
     url = "https://github.com/folke/tokyonight.nvim"
@@ -218,7 +219,7 @@ _G.packer_plugins = {
     url = "https://github.com/Wansmer/treesj"
   },
   ["trouble.nvim"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ftrouble\frequire\0" },
     loaded = true,
     path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
@@ -232,11 +233,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/vim-auto-save",
     url = "https://github.com/907th/vim-auto-save"
-  },
-  ["vim-be-good"] = {
-    loaded = true,
-    path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/vim-be-good",
-    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vim-commentary"] = {
     loaded = true,
@@ -261,30 +257,34 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
--- Config for: nvim-colorizer.lua
-time([[Config for nvim-colorizer.lua]], true)
-try_loadstring("\27LJ\2\nÖ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\25user_default_options\1\0\1\25user_default_options\0\1\0\3\nnames\1\bRGB\2\bhex\2\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
-time([[Config for nvim-colorizer.lua]], false)
 -- Config for: treesj
 time([[Config for treesj]], true)
 try_loadstring("\27LJ\2\nN\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\20max_join_length\3Ë\a\nsetup\vtreesj\frequire\0", "config", "treesj")
 time([[Config for treesj]], false)
 -- Config for: todo-comments.nvim
 time([[Config for todo-comments.nvim]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
 time([[Config for todo-comments.nvim]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+try_loadstring("\27LJ\2\n|\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\nscope\1\0\1\fenabled\1\vindent\1\0\2\vindent\0\nscope\0\1\0\1\tchar\b‚ñè\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
+time([[Config for indent-blankline.nvim]], false)
 -- Config for: tokyonight
 time([[Config for tokyonight]], true)
-try_loadstring("\27LJ\2\nª\1\0\0\3\0\a\0\0146\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\0016\0\0\0009\0\4\0009\0\5\0'\2\6\0B\0\2\1K\0\1\0001highlight StatusLine guibg=none ctermbg=none\17nvim_command\bapi#highlight Visual guibg=#394F78\27colorscheme tokyonight\bcmd\bvim\0", "config", "tokyonight")
+try_loadstring("\27LJ\2\nª\1\0\0\3\0\a\0\0146\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\0016\0\0\0009\0\4\0009\0\5\0'\2\6\0B\0\2\1K\0\1\0001highlight StatusLine guibg=none ctermbg=none\17nvim_command\bapi#highlight Visual guibg=#3d3d3d\27colorscheme tokyonight\bcmd\bvim\0", "config", "tokyonight")
 time([[Config for tokyonight]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+try_loadstring("\27LJ\2\n¢\1\0\0\4\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\0\0=\3\4\0025\3\5\0=\3\6\2B\0\2\1K\0\1\0\25user_default_options\1\0\3\bRGB\2\bhex\2\nnames\1\14filetypes\1\0\2\14filetypes\0\25user_default_options\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
+time([[Config for nvim-colorizer.lua]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

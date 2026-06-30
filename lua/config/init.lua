@@ -1,7 +1,7 @@
 require('config.remap')
 require('config.set')
 
--- require('onedark').setup {
+    -- require('onedark').setup {
     --     style = 'warmer',
     -- }
 
@@ -11,33 +11,33 @@ require('config.set')
 
         on_colors = function(colors)
 
-            -- Backgrounds (but bg is turned off)
-            colors.bg_root        = "#181c27"
-            colors.bg_dark1       = "#1b1f2e"
-            colors.black          = "#16191f"
-            colors.border         = "#2d364f"
-            colors.bg             = "#212630"
-            colors.bg_sidebar     = "#1d2130"
-            colors.bg_popup       = "#262d3e"
-            colors.bg_dark        = "#1c2030"
-            colors.bg_float       = "#262d3e"
-            colors.bg_statusline  = "#1d2130"
-            colors.bg_highlight   = "#3A4355"
-            colors.bg_visual      = "#301828"
-            colors.bg_search      = "#3a3608"
+            -- Backgrounds
+            colors.bg_root        = "#1c1c1c"
+            colors.bg_dark1       = "#1e1e1e"
+            colors.black          = "#181818"
+            colors.border         = "#292929"
+            colors.bg             = "#222222"
+            colors.bg_sidebar     = "#1e1e1e"
+            colors.bg_popup       = "#282828"
+            colors.bg_dark        = "#1e1e1e"
+            colors.bg_float       = "#292929"
+            colors.bg_statusline  = "#1e1e1e"
+            colors.bg_highlight   = "#444444"
+            colors.bg_visual      = "#252525"
+            colors.bg_search      = "#313131"
 
             -- Foregrounds
-            colors.fg             = "#ccd6f0"
-            colors.fg_float       = "#ccd6f0"
-            colors.fg_dark        = "#a5b4d0"
-            colors.fg_sidebar     = "#8898bc"
+            colors.fg             = "#cccccc"
+            colors.fg_float       = "#cccccc"
+            colors.fg_dark        = "#bbbbbb"
+            colors.fg_sidebar     = "#aaaaaa"
 
             -- Gutters / Comments
-            colors.comment        = "#6275A0"
-            colors.terminal_black = "#6275A0"
-            colors.fg_gutter      = "#4E6482"
-            colors.dark3          = "#3d5272"
-            colors.dark5          = "#506884"
+            colors.comment        = "#676767"
+            colors.terminal_black = "#676767"
+            colors.fg_gutter      = "#494949"
+            colors.dark3          = "#3d3d3d"
+            colors.dark5          = "#4d4d4d"
 
             -- Yellows
             colors.blue           = "#EFC000"
@@ -61,8 +61,8 @@ require('config.set')
 
             -- Blues
             colors.yellow         = "#169FFF"
-            colors.blue7          = "#2e2a00"
-            colors.blue0          = "#252200"
+            colors.blue7          = "#292929"
+            colors.blue0          = "#292929"
 
             -- Reds
             colors.purple         = "#EE5D43"
@@ -70,10 +70,10 @@ require('config.set')
             colors.red1           = "#d84b5e"
 
             -- Semantic
-            colors.warning        = "#3A8AF6"
-            colors.info           = "#FFD701"
+            colors.warning        = "#EFC000"
+            colors.info           = "#00FF00"
             colors.error          = "#EE5D43"
-            colors.todo           = "#FFD701"
+            colors.todo           = "#00FF00"
 
             colors.none           = "NONE"
 
@@ -91,12 +91,12 @@ require('config.set')
             -- colors.blue1 = "#59b7ff"
 
             -- old black bg:
-            -- colors.bg = "#000000"
-            -- colors.bg_sidebar = "#000000"
-            -- colors.bg_popup = "#000000"
-            -- colors.bg_dark = "#000000"
-            -- colors.bg_statusline = "#000000"
-            -- colors.bg_float = "#000000"
+            colors.bg = "#000000"
+            colors.bg_sidebar = "#000000"
+            colors.bg_popup = "#000000"
+            colors.bg_dark = "#000000"
+            colors.bg_statusline = "#000000"
+            colors.bg_float = "#000000"
 
             -- colors.bg = "#0D1424"
             -- colors.bg_sidebar = "#0D1424"
