@@ -54,7 +54,7 @@ require('config.set')
             colors.magenta2       = "#ff50d8"
 
             -- Greens
-            colors.green          = "#4dd68c"
+            colors.green          = "#96e072"
             colors.green1         = "#02E8C6"
             colors.green2         = "#1a9858"
             colors.hint           = "#38d8a0"
