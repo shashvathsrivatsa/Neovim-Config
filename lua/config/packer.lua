@@ -101,6 +101,15 @@ require("packer").startup(function(use)
         end
     })
 
+    use ({
+        "folke/flash.nvim",
+        config = function()
+            require("flash").setup()
+        end
+    })
+
+
+
     use ("tpope/vim-commentary")
     use ("tpope/vim-fugitive")
     use ("mg979/vim-visual-multi")

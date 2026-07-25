@@ -114,6 +114,12 @@ _G.packer_plugins = {
     path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/coq_nvim",
     url = "https://github.com/ms-jpq/coq_nvim"
   },
+  ["flash.nvim"] = {
+    config = { "\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nflash\frequire\0" },
+    loaded = true,
+    path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/flash.nvim",
+    url = "https://github.com/folke/flash.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/shashvathsrivatsa/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -263,26 +269,30 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: todo-comments.nvim
-time([[Config for todo-comments.nvim]], true)
-try_loadstring("\27LJ\2\në\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\rkeywords\1\0\1\rkeywords\0\vCLAUDE\1\0\1\vCLAUDE\0\1\0\2\ncolor\f#D97757\ticon\b‚ú¶\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
-time([[Config for todo-comments.nvim]], false)
--- Config for: markview.nvim
-time([[Config for markview.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rmarkview\frequire\0", "config", "markview.nvim")
-time([[Config for markview.nvim]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
+-- Config for: flash.nvim
+time([[Config for flash.nvim]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nflash\frequire\0", "config", "flash.nvim")
+time([[Config for flash.nvim]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+try_loadstring("\27LJ\2\në\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\rkeywords\1\0\1\rkeywords\0\vCLAUDE\1\0\1\vCLAUDE\0\1\0\2\ncolor\f#D97757\ticon\b‚ú¶\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time([[Config for todo-comments.nvim]], false)
 -- Config for: indent-blankline.nvim
 time([[Config for indent-blankline.nvim]], true)
 try_loadstring("\27LJ\2\n|\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\nscope\1\0\1\fenabled\1\vindent\1\0\2\vindent\0\nscope\0\1\0\1\tchar\b‚ñè\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
 time([[Config for indent-blankline.nvim]], false)
+-- Config for: markview.nvim
+time([[Config for markview.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rmarkview\frequire\0", "config", "markview.nvim")
+time([[Config for markview.nvim]], false)
 -- Config for: tokyonight
 time([[Config for tokyonight]], true)
 try_loadstring("\27LJ\2\nª\1\0\0\3\0\a\0\0146\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\0016\0\0\0009\0\4\0009\0\5\0'\2\6\0B\0\2\1K\0\1\0001highlight StatusLine guibg=none ctermbg=none\17nvim_command\bapi#highlight Visual guibg=#3d3d3d\27colorscheme tokyonight\bcmd\bvim\0", "config", "tokyonight")
