@@ -65,6 +65,10 @@ vim.keymap.set("n", "<leader>w", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.api.nvim_set_keymap('n', '<F5>', ':let @+=expand(\'%:p\')<CR>', {noremap = true, silent = true})    -- Copy file path to clipboard
 vim.keymap.set('n', '<leader>r', ':e!<CR>')    -- Reload file
 
+--  JUMP LIST  --
+vim.keymap.set('n', '<C-i>', '<C-o>')    -- Switch ctrl+i and ctrl+o
+vim.keymap.set('n', '<C-o>', '<C-i>')    -- Switch ctrl+i and ctrl+o
+
 --  MISC  --
 -- vim.api.nvim_set_keymap('n', '<C-e>', '<C-w>', {noremap = true})	-- Switch between buffers with control + e
 vim.keymap.set('n', '<leader>dc', 'F/lld0i<backspace><leader><Esc>$')     -- Combines comments onto previous line

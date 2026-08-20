@@ -31,7 +31,7 @@ require("packer").startup(function(use)
     })
 
     --- Tree Sitter --------------------------------------------------------------------------------------------------------------
-    use ("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
+    use ({"nvim-treesitter/nvim-treesitter", branch = "master", run = ":TSUpdate"})
 
     --- Theme --------------------------------------------------------------------------------------------------------------------
     use ({
@@ -101,12 +101,12 @@ require("packer").startup(function(use)
         end
     })
 
-    use ({
-        "folke/flash.nvim",
-        config = function()
-            require("flash").setup()
-        end
-    })
+    -- use ({
+    --     "folke/flash.nvim",
+    --     config = function()
+    --         require("flash").setup()
+    --     end
+    -- })
 
 
 

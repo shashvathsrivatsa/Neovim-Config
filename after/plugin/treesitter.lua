@@ -1,27 +1,9 @@
--- use :Mason to install and update parsers
-
-require'mason-lspconfig'.setup {
-	-- A list of parser names, or "all" (the five listed parsers should always be installed)
+require'nvim-treesitter.configs'.setup {
 	ensure_installed = {
-        -- "ts_ls",
-        -- "pyright",
-        -- "lua_ls",
-        -- "all",
-        -- "json",
-        -- "javascript",
-        -- "typescript",
-        -- "tsx",
-        -- "c",
-        -- "lua",
-        -- "vim",
-        -- "vimdoc",
-        -- "query",
-        -- "yaml",
-        -- "python",
-        -- "bash",
-        -- "gitignore",
-        -- "markdown",
-        -- "markdown_inline"
+        "lua", "vim", "vimdoc", "query",
+        -- "json", "javascript", "typescript", "tsx",
+        -- "c", "rust", "python", "bash",
+        -- "yaml", "markdown", "markdown_inline"
     },
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)
@@ -29,7 +11,7 @@ require'mason-lspconfig'.setup {
 
 	-- Automatically install missing parsers when entering buffer
 	-- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-	auto_install = true,
+	auto_install = false,
 
 	highlight = {
 		enable = true,
